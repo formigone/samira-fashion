@@ -22,10 +22,6 @@
             overflow-y: scroll;
         }
 
-        .fullHeight {
-            height: 100%;
-        }
-
         .paletteBgLight {
             background: #fff;
         }
@@ -35,7 +31,6 @@
         }
 
         .leftCol {
-            border-right: 2px solid #ddd;
             width: 30%;
             margin: 0;
             padding: 0;
@@ -43,7 +38,8 @@
         }
 
         .rightCol {
-            border-left: 1px solid #fff;
+            border-left: 2px solid #fff;
+            box-shadow: -2px 0 0 0 #ddd;
             width: 70%;
             margin: 0;
             padding: 0;
@@ -52,20 +48,50 @@
 
         .leftColContainer {
             width: 250px;
-            margin: 20px;
+            margin: 30px 40px;
             float: right;
         }
 
-        @media (max-width: 1000px) {
+        .rightColContainer {
+            width: 815px;
+            margin: 30px 40px 60px;
+        }
+
+        .previewPanel {
+            box-shadow: 0 0 2px 1px rgba(0, 0, 0, .06), 0 1px 5px rgba(0, 0, 0, .1);
+        }
+
+        .previewPanelBody {
+            background: #fff;
+            padding: 60px 100px;
+        }
+
+        .previewPanelBody h1 {
+            padding: 0;
+            margin: 0;
+        }
+
+        @media (max-width: 1250px) {
             .leftCol {
-                width: 25%;
+                width: 35%;
             }
+
             .rightCol {
-                width: 75%;
+                width: 65%;
             }
 
             .leftColContainer {
-                width: 200px;
+                width: 220px;
+            }
+
+            .rightColContainer {
+                width: 600px;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .rightColContainer {
+                width: 470px;
             }
         }
 
@@ -82,6 +108,7 @@
                 background: #fff;
                 float: none;
             }
+
             .rightCol {
                 width: 90%;
                 background: transparent;
@@ -92,6 +119,23 @@
 
             .leftColContainer {
                 width: 100%;
+                float: none;
+                margin: 0 auto;
+            }
+
+            .rightColContainer {
+                width: 100%;
+                margin: 0;
+            }
+
+            .hideSmall {
+                display: none;
+            }
+
+            .leftCol .logo {
+                margin: 0;
+                padding: 20px;
+                text-align: right;
             }
         }
     </style>
@@ -99,13 +143,34 @@
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-<div class="fullHeight">
-    <div class="leftCol paletteBgLight fullHeight">
-        <div class="leftColContainer">
-            <h1 class="text-center">Samira</h1>
+<div class="leftCol paletteBgLight">
+    <div class="leftColContainer">
+        <h1 class="text-center logo">Samira</h1>
+
+        <div class="hideSmall">
+            <p class="text-center">ABOUT THE AUTHOR</p>
+            <img src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/11234967_10153093318596239_1449381124828159545_n.jpg?oh=651b6a4f7eeb10bfc9915e12ea040507&oe=56767535&__gda__=1449827107_1f0d915420106e0476df34a1f608cb3d"
+                 class="img-responsive">
         </div>
     </div>
-    <div class="rightCol paletteBgMedium fullHeight">Content</div>
+</div>
+<div class="rightCol paletteBgMedium">
+    <div class="rightColContainer">
+        <div class="previewPanel">
+            <div class="previewPanelHead">
+                <img class="img-responsive"
+                     src="https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/10985388_10152990044181239_4523968035902929290_n.jpg?oh=60ada8e6c00cc375e8b55fa0d099091b&oe=5642C4D5&__gda__=1446482090_3e50ad64f9ebf34b6ab115b11b08b360">
+            </div>
+            <div class="previewPanelBody">
+                <h1 class="text-center">Eu sou caipixa-pira-pora</h1>
+
+                <p>There are those who believe that life here began out there… far across the universe, with tribes of
+                    humans who may have been the forefathers of the Egyptians or the Toltecs or the Mayans. Some believe
+                    that there may yet be brothers </p>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
 </div>
 
 </body>
