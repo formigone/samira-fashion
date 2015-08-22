@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Samira Fashion</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            overflow-y: scroll;
+        }
+
+        .fullHeight {
+            height: 100%;
+        }
+
+        .paletteBgLight {
+            background: #fff;
+        }
+
+        .paletteBgMedium {
+            background: #f5f5f5;
+        }
+
+        .leftCol {
+            border-right: 2px solid #ddd;
+            width: 30%;
+            margin: 0;
+            padding: 0;
+            float: left;
+        }
+
+        .rightCol {
+            border-left: 1px solid #fff;
+            width: 70%;
+            margin: 0;
+            padding: 0;
+            float: left;
+        }
+
+        .leftColContainer {
+            width: 250px;
+            margin: 20px;
+            float: right;
+        }
+
+        @media (max-width: 1000px) {
+            .leftCol {
+                width: 25%;
+            }
+            .rightCol {
+                width: 75%;
+            }
+
+            .leftColContainer {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 800px) {
+            body {
+                background: #fafafa;
+            }
+
+            .leftCol {
+                width: 90%;
+                height: 100px;
+                margin: 0 auto 50px;
+                border: none;
+                background: #fff;
+                float: none;
+            }
+            .rightCol {
+                width: 90%;
+                background: transparent;
+                margin: 0 auto;
+                border: none;
+                float: none;
+            }
+
+            .leftColContainer {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<div class="fullHeight">
+    <div class="leftCol paletteBgLight fullHeight">
+        <div class="leftColContainer">
+            <h1 class="text-center">Samira</h1>
+        </div>
+    </div>
+    <div class="rightCol paletteBgMedium fullHeight">Content</div>
+</div>
+
+</body>
+</html>
